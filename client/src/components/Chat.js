@@ -19,7 +19,7 @@ const Chat = () => {
         // 유저이름과 방이 빈값이 아닐때만
         if(userName !== "" && room !== ""){
             setShowChat(true);
-            // 서버에 데이터 전송
+            // 서버에 방이름 전송 같은 방일경우에 서로의 채팅이 보인다.
             socket.emit("join_room", room);
         }
     }

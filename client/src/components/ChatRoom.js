@@ -83,7 +83,7 @@ const Container = styled.div`
     & .msg-container {
         width: 100%;
         height: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
         overflow-x: hidden;
     }
 
@@ -111,9 +111,9 @@ const MessageContent = styled.div`
     height: auto;
     min-height: 40px;
     max-width: 120px;
-    background-color: ${(props) => (props.className === 'me' ? "#43a047" : "#9E56EB")};
+    background-color: ${(props) => (props.className === 'me' ? "#ffeb33" : "#fff")};
     border-radius: 5px;
-    color: white;
+    color: black;
     display: flex;
     align-items: center;
     margin-right: 5px;
@@ -122,15 +122,17 @@ const MessageContent = styled.div`
     padding-left: 5px;
     overflow-wrap: break-word;
     word-break: break-word;
+    box-shadow: 1px 1px 1px 1px gray;
 `;
 
 
 const ChatBody = styled.div`
     /* height: calc(450px - (45px + 70px)); */
     height: 400px;
-    border: 1px solid #263238;
-    background: #fff;
+    /* border: 1px solid #263238; */
+    background: #b2c7d9;
     position: relative;
+
 `;
 
 export default ChatRoom;
